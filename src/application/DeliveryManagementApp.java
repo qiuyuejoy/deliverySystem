@@ -40,6 +40,10 @@ class Delivery {
 	public String getTrackingNumber() {
 		return trackingNumber;
 	}
+	
+	public String getRecipientName() {
+		return recipientName;
+	}
 }
 
 class DeliveryManager {
@@ -113,9 +117,9 @@ public class DeliveryManagementApp extends Application {
         TextField recipientNameField = new TextField();
 
         GridPane grid = new GridPane();
-        grid.add(new Label("Tracking Number:"), 0, 0);
+        grid.add(new Label("Tracking Number: "), 0, 0);
         grid.add(trackingNumberField, 1, 0);
-        grid.add(new Label("Recipient Name:"), 0, 1);
+        grid.add(new Label("Recipient Name: "), 0, 1);
         grid.add(recipientNameField, 1, 1);
 
         dialog.getDialogPane().setContent(grid);
