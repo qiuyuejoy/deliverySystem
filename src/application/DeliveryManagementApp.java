@@ -9,87 +9,24 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.layout.GridPane;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
-class Delivery {
-    private String trackingNumber;
-    private String recipientName;
-    private boolean isSigned;
-
-    public Delivery(String trackingNumber, String recipientName) {
-        this.trackingNumber = trackingNumber;
-        this.recipientName = recipientName;
-        this.isSigned = false;
-    }
-
-    public void setSigned(boolean signed) {
-        this.isSigned = signed;
-    }
-
-    public boolean isSigned() {
-        return isSigned;
-    }
-
-    @Override
-    public String toString() {
-        return "Tracking Number: " + trackingNumber + ", Recipient: " + recipientName + ", Signed: " + isSigned;
-    }
-
-	public String getTrackingNumber() {
-		return trackingNumber;
-	}
-	
-	public String getRecipientName() {
-		return recipientName;
-	}
-}
-
-class DeliveryManager {
-    private Map<String, Delivery> deliveryMap;
-
-    public DeliveryManager() {
-        deliveryMap = new HashMap<>();
-    }
-
-    public void addDelivery(Delivery delivery) {
-        deliveryMap.put(delivery.getTrackingNumber(), delivery);
-    }
-
-    public boolean queryDeliveryStatus(String trackingNumber) {
-        if (deliveryMap.containsKey(trackingNumber)) {
-            Delivery delivery = deliveryMap.get(trackingNumber);
-            return delivery.isSigned();
-        }
-        return false;
-    }
-
-    public void updateDeliveryStatus(String trackingNumber, boolean signed) {
-        if (deliveryMap.containsKey(trackingNumber)) {
-            Delivery delivery = deliveryMap.get(trackingNumber);
-            delivery.setSigned(signed);
-        }
-    }
-	
-	public Collection<Delivery> getDeliveries() {
-	    return deliveryMap.values();
-	}
-}
 
 public class DeliveryManagementApp extends Application {
-    private DeliveryManager deliveryManager;
+    private Carrier carrier;
+    private Recipient recipient;
+	private DeliveryPool deliveryPool;
     private ListView<Delivery> deliveryListView;
 
     public static void main(String[] args) {
-        launch(args);
+    	Application.launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) {
-        deliveryManager = new DeliveryManager();
-        deliveryListView = new ListView<>();
-        deliveryListView.setPrefWidth(300);
+    	
+    	deliveryPool = new DeliveryPool();
+    	carrier = new Carrier("Tom", 666888, 5, deliveryPool);
+        deliveryListView = new ListView<Delivery>();
+        deliveryListView.setPrefWidth(800);
         updateDeliveryListView();
 
         Button addButton = new Button("Add Delivery");
@@ -107,7 +44,7 @@ public class DeliveryManagementApp extends Application {
     }
 
     private void showAddDeliveryDialog() {
-        Dialog<Delivery> dialog = new Dialog<>();
+        Dialog<Delivery> dialog = new Dialog<Delivery>();
         dialog.setTitle("Add Delivery");
 
         ButtonType addButton = new ButtonType("Add", ButtonBar.ButtonData.OK_DONE);
@@ -134,7 +71,7 @@ public class DeliveryManagementApp extends Application {
         });
 
         dialog.showAndWait().ifPresent(delivery -> {
-            deliveryManager.addDelivery(delivery);
+        	carrier.scanDelivery(delivery);
             updateDeliveryListView();
         });
     }
@@ -163,7 +100,7 @@ public class DeliveryManagementApp extends Application {
     }
 
     private void updateDeliveryListView() {
-        ObservableList<Delivery> deliveryList = FXCollections.observableArrayList(deliveryManager.getDeliveries());
+        ObservableList<Delivery> deliveryList = FXCollections.observableArrayList(deliveryPool.getDeliveryMap().values());
         deliveryListView.setItems(deliveryList);
     }
 }
