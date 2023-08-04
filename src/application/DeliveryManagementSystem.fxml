@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.CharmListView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
@@ -17,29 +18,30 @@
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="529.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/deliveryMan.jpeg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="112.0" fitWidth="224.0" layoutX="505.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/recipent.jpeg" />
          </image>
       </ImageView>
-      <VBox alignment="CENTER" layoutX="58.0" layoutY="60.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+      <VBox alignment="CENTER_LEFT" layoutX="300.0" layoutY="61.0" prefHeight="200.0" prefWidth="200.0" spacing="20.0">
          <children>
             <Button fx:id="btnRecipient" mnemonicParsing="false" onAction="#btnRecipientClick" text="I'm a Recipient " />
-            <Button fx:id="btnTrcakNumber" mnemonicParsing="false" onAction="#btnTrackPackageClick" text="Track My Package" />
+            <Button fx:id="btnTrcakPackage" mnemonicParsing="false" onAction="#btnTrackPackageClick" text="Track My Package" />
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" text="Notification Preference" />
+            <Button mnemonicParsing="false" text="Confirm  Receipt" />
             <Button mnemonicParsing="false" text="Rate the Carrier" />
          </children>
       </VBox>
-      <VBox alignment="CENTER" layoutX="58.0" layoutY="335.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+      <VBox alignment="CENTER_LEFT" layoutX="310.0" layoutY="333.0" prefHeight="200.0" prefWidth="200.0" spacing="20.0">
          <children>
             <Button fx:id="btnCarrier" mnemonicParsing="false" onAction="#btnCarrierClick" text="I'm a carrier " />
+            <Button fx:id="btnScanPackage" mnemonicParsing="false" onAction="#btnScanPackageClick" text="Add Package" />
             <Button mnemonicParsing="false" text="Upload Destination Image" />
-            <Button fx:id="btnScanPackage" mnemonicParsing="false" onAction="#btnScanPackageClick" text="Scan Package" />
             <Button mnemonicParsing="false" text="Change Status" />
             <Button mnemonicParsing="false" text="Notify Recipient" />
          </children>
@@ -48,6 +50,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
+                  <CharmListView />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recipient" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Track Number" textAlignment="JUSTIFY" />
                   <TextField />
