@@ -12,7 +12,7 @@ import javafx.scene.layout.GridPane;
 
 public class DeliveryManagementApp extends Application {
     private Carrier carrier;
-    private Recipient recipient;
+//    private Recipient recipient;
 	private DeliveryPool deliveryPool;
     private ListView<Delivery> deliveryListView;
 
