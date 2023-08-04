@@ -1,5 +1,8 @@
 package application;
 
+import application.model.Carrier;
+import application.model.Delivery;
+import application.tools.DeliveryPool;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

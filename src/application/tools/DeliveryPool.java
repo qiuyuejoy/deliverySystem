@@ -1,7 +1,9 @@
-package application;
+package application.tools;
 
 import java.util.Collection;
 import java.util.HashMap;
+
+import application.model.Delivery;
 
 public class DeliveryPool {
 	private HashMap<String, Delivery> deliveryMap;

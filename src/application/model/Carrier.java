@@ -1,5 +1,6 @@
-package application;
+package application.model;
 
+import application.tools.DeliveryPool;
 
 public class Carrier extends Person{
 	private int rating;

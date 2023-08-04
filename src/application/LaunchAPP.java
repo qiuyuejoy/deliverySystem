@@ -10,13 +10,15 @@ public class LaunchAPP extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("DeliveryManagement.fxml"));
-		Scene scene = new Scene(root,400,400);
-		primaryStage.setScene(scene);
-		primaryStage.show();
+		
+			Parent root = FXMLLoader.load(getClass().getResource("DeliveryManagementSystem.fxml"));
+			Scene scene = new Scene(root);
+			primaryStage.setTitle("Delivery Management System");
+			primaryStage.setScene(scene);
+			primaryStage.show();	
 	}
 	
 	public static void main(String[] args) {
-		launch(args);
+		Application.launch(args);
 	}
 }
