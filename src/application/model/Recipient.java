@@ -1,4 +1,7 @@
-package application;
+package application.model;
+
+import application.tools.DeliveryPool;
+import application.tools.Preference;
 
 public class Recipient extends Person{
 	private String address;

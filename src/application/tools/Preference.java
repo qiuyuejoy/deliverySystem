@@ -1,4 +1,4 @@
-package application;
+package application.tools;
 
 public class Preference {
 	private String method;

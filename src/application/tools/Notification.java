@@ -1,4 +1,6 @@
-package application;
+package application.tools;
+
+import application.model.Recipient;
 
 public class Notification {
     private Recipient recipient;

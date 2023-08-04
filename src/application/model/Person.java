@@ -1,4 +1,4 @@
-package application;
+package application.model;
 
 public class Person {
 	private String name;

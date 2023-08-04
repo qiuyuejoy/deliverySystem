@@ -32,16 +32,16 @@
          <children>
             <Button fx:id="btnRecipient" mnemonicParsing="false" onAction="#btnRecipientClick" text="I'm a Recipient " />
             <Button fx:id="btnTrcakPackage" mnemonicParsing="false" onAction="#btnTrackPackageClick" text="Track My Package" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" text="Notification Preference" />
-            <Button mnemonicParsing="false" text="Confirm  Receipt" />
-            <Button mnemonicParsing="false" text="Rate the Carrier" />
+            <Button fx:id="btnNotiPrefe" mnemonicParsing="false" onAction="#btnNotiPrefeClick" prefHeight="25.0" prefWidth="152.0" text="Notification Preference" />
+            <Button fx:id="btnConfirmRecient" mnemonicParsing="false" onAction="#btnConfirmRecientClick" text="Confirm  Receipt" />
+            <Button fx:id="btnRateCarrier" mnemonicParsing="false" onAction="#btnRateCarrierClick" text="Rate the Carrier" />
          </children>
       </VBox>
       <VBox alignment="CENTER_LEFT" layoutX="310.0" layoutY="333.0" prefHeight="200.0" prefWidth="200.0" spacing="20.0">
          <children>
             <Button fx:id="btnCarrier" mnemonicParsing="false" onAction="#btnCarrierClick" text="I'm a carrier " />
-            <Button fx:id="btnScanPackage" mnemonicParsing="false" onAction="#btnScanPackageClick" text="Add Package" />
-            <Button mnemonicParsing="false" text="Upload Destination Image" />
+            <Button fx:id="btnAddPackage" mnemonicParsing="false" onAction="#btnAddPackageClick" text="Add Package" />
+            <Button fx:id="btnUploadImage" mnemonicParsing="false" onAction="#btnUploadImageClick" text="Upload Destination Image" />
             <Button mnemonicParsing="false" text="Change Status" />
             <Button mnemonicParsing="false" text="Notify Recipient" />
          </children>
