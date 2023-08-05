@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login.CarrLoginViewController">
+   <children>
+      <Button fx:id="btnForget" layoutX="419.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnForgetClick" text="Forget Password" />
+      <HBox alignment="CENTER" layoutX="97.0" layoutY="256.0" prefHeight="100.0" prefWidth="376.0" spacing="200.0">
+         <children>
+            <Button fx:id="btnCarriRegister" mnemonicParsing="false" onAction="#btnCarriRegisterClick" text="Register" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#btnLoginClick" text="Login" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="214.0" layoutY="50.0" prefHeight="225.0" prefWidth="173.0" spacing="50.0">
+         <children>
+            <TextField promptText="Enter your name" />
+            <TextField promptText="Enter you password" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
