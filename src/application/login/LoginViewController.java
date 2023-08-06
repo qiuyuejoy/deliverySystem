@@ -15,7 +15,7 @@ public class LoginViewController extends Controller{
 	
     @FXML
     void btnCarrierLoginClick(ActionEvent event) throws Exception {
-    	getLaunchApp().showCarrLoginView();
+    	launchApp.showCarrLoginView();
     }
 
     @FXML
