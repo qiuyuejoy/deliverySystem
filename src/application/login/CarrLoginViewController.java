@@ -16,21 +16,32 @@ public class CarrLoginViewController extends Controller{
 
     @FXML
     private Button btnLogin;
+    
+    @FXML
+    private Button btnReturn;
 
     @FXML
-    void btnCarriRegisterClick(ActionEvent event) {
-
+    void btnCarriRegisterClick(ActionEvent event) throws Exception {
+    	launchApp.showRegistView();
     }
 
     @FXML
-    void btnForgetClick(ActionEvent event) {
-
+    void btnForgetClick(ActionEvent event) throws Exception {
+    	launchApp.showForgetView();
     }
 
     @FXML
-    void btnLoginClick(ActionEvent event) {
-
+    void btnLoginClick(ActionEvent event) throws Exception {
+    	
+    }
+    
+    @FXML
+    void btnReturnClick(ActionEvent event) throws Exception {
+    	launchApp.showLoginView();
     }
 
 }
+
+
+
 

@@ -21,5 +21,6 @@
             <TextField promptText="Enter you password" />
          </children>
       </VBox>
+      <Button fx:id="btnReturn" layoutX="52.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return to Home" />
    </children>
 </AnchorPane>

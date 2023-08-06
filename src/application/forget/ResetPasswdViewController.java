@@ -1,5 +1,7 @@
 package application.forget;
 
-public class ResetPasswdViewController {
+import appication.system.Controller;
+
+public class ResetPasswdViewController extends Controller{
 
 }
