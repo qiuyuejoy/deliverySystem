@@ -1,5 +1,7 @@
 package application.login;
 
-public class ReciLoginViewController {
+import appication.system.Controller;
+
+public class ReciLoginViewController extends Controller{
 
 }

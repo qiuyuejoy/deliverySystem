@@ -14,12 +14,12 @@ public class LoginViewController extends Controller{
     private Button btnRecipientLogin;
 	
     @FXML
-    void btnCarrierLoginClick(ActionEvent event) {
+    void btnCarrierLoginClick(ActionEvent event) throws Exception {
     	getLaunchApp().showCarrLoginView();
     }
 
     @FXML
-    void btnRecipientLoginClick(ActionEvent event) {
+    void btnRecipientLoginClick(ActionEvent event) throws Exception {
     	launchApp.showReciLoginView();
     }
 }
