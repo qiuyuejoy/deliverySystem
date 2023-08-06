@@ -4,6 +4,8 @@ import application.forget.*;
 import application.model.*;
 import application.login.*;
 import application.regist.*;
+import application.carrier.*;
+import application.recipient.*;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -67,8 +69,13 @@ public class LaunchAPP extends Application {
 		regController.setLaunchApp(this);
 	}
 	
+	public void showCarrierMainView() throws Exception {
+		stage.setTitle("Carrier Main");
+		CarrierMainViewController carrierController = (CarrierMainViewController)replaceSceneContent("carrier/CarrierMainView.fxml");
+		carrierController.setLaunchApp(this);
+	}
+	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
-		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(fxmlFile));
 		AnchorPane ap = (AnchorPane)loader.load();
@@ -108,4 +115,6 @@ public class LaunchAPP extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
+
+
 }

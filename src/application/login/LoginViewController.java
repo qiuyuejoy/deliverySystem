@@ -1,6 +1,6 @@
 package application.login;
 
-import appication.system.Controller;
+import application.system.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,7 +15,7 @@ public class LoginViewController extends Controller{
 	
     @FXML
     void btnCarrierLoginClick(ActionEvent event) throws Exception {
-    	getLaunchApp().showCarrLoginView();
+    	launchApp.showCarrLoginView();
     }
 
     @FXML

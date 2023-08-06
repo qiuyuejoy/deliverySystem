@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="300.0" minWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.recipient.PackageStatusController">
+   <children>
+      <ImageView fitHeight="339.0" fitWidth="611.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/recipient/PackageStatusChecking.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnConfirm" layoutX="366.0" layoutY="170.0" mnemonicParsing="false" onAction="#ClickComfirm" text="Confirm" />
+      <TextField layoutX="132.0" layoutY="170.0" prefHeight="23.0" prefWidth="215.0" promptText="Please enter your tracking number" />
+      <Label fx:id="btnReplyMessage" layoutX="132.0" layoutY="211.0" prefHeight="67.0" prefWidth="298.0" text="Label" />
+   </children>
+</AnchorPane>
