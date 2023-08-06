@@ -75,6 +75,12 @@ public class LaunchAPP extends Application {
 		carrierController.setLaunchApp(this);
 	}
 	
+	public void showRecipientMainView() throws Exception {
+		stage.setTitle("Recipient Main");
+		RecipientMainViewController recipientController = (RecipientMainViewController)replaceSceneContent("recipient/RecipientControllerMainView.fxml");
+		recipientController.setLaunchApp(this);
+	}
+	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(fxmlFile));
@@ -115,6 +121,5 @@ public class LaunchAPP extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
-
 
 }

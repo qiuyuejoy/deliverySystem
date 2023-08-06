@@ -1,12 +1,17 @@
 package application.login;
 
+import application.model.Carrier;
 import application.system.Controller;
+import application.tools.Database;
+import application.tools.UserPasswdCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class ReciLoginViewController extends Controller{
-	@FXML
+
+    @FXML
     private Button btnForget;
 
     @FXML
@@ -16,27 +21,50 @@ public class ReciLoginViewController extends Controller{
     private Button btnRegist;
 
     @FXML
-    private Button btnReturnHome;
+    private Button btnReturn;
+    
+    @FXML
+    private TextField passwdInput;
 
     @FXML
-    void btnForgetClick(ActionEvent event) throws Exception {
+    private TextField userNameInput;
+    
+    @FXML
+    void ClickForget(ActionEvent event) throws Exception {
     	launchApp.showForgetView();
     }
 
     @FXML
-    void btnLoginClick(ActionEvent event) {
-
+    void ClickLogin(ActionEvent event) throws Exception {
+    	String userName = userNameInput.getText();
+		String password = passwdInput.getText();
+		
+		if(UserPasswdCheck.isValidUserName(userName) && UserPasswdCheck.isValidPassword(password)) {
+			Carrier carrier = Database.getCarrier(userName, password);
+			if(carrier != null) {
+				launchApp.setCarrier(carrier);
+				launchApp.showRecipientMainView();
+			}else {
+				userNameInput.clear();
+				passwdInput.clear();
+			}
+		}else {
+			userNameInput.clear();
+			passwdInput.clear();
+		}
     }
 
     @FXML
-    void btnRegistClick(ActionEvent event) throws Exception {
+    void ClickRegist(ActionEvent event) throws Exception {
     	launchApp.showRegistView();
     }
 
     @FXML
-    void btnReturnHomeClick(ActionEvent event) throws Exception {
+    void ClickReturn(ActionEvent event) throws Exception {
     	launchApp.showLoginView();
     }
 }
+
+
 
 
