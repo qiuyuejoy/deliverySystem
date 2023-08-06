@@ -11,21 +11,26 @@ The Delivery Management System is the final project for CSYE6200-Concepts of Obj
 <!-- TOC -->
 * [📑 Overview](#-overview)
 * [💻 Environment](#-environment)
-* [🛠 Installing](#-installing)
+* [🛠 Installation](#-installation)
 * [🚀 Technologies](#-technologies)
 <!-- TOC -->
 
 # 📑 Overview
-In this project, we built a Delivery Management System.
-...
+In this project, we built a Delivery Management System based on JavaFX for both delivery man and recipient. 
+
 
 # 💻 Environment
-This project is based on [JavaFx](https://openjfx.io/), tutorial [Getting Started](https://openjfx.io/openjfx-docs/). 
-UI/UX is designed Using [SceneBuilder](https://gluonhq.com/products/scene-builder/).
-...
+• [JavaFx](https://openjfx.io/), tutorial [Getting Started](https://openjfx.io/openjfx-docs/)
 
-# 🛠 Installing
-...
+• [MySQL](https://www.mysql.com/)
+
+• [SceneBuilder](https://gluonhq.com/products/scene-builder/)
+
+# 🛠 Installation
+1. Clone the repository into your local machine
+2. Download [JavaFX SDK](https://gluonhq.com/products/javafx/) and [MySQL](https://dev.mysql.com/downloads/installer/)
+3. Configure MySQL and open MySQL Workbench. Import the database 'database'
+4. 
 
 # 🚀 Technologies
 This project was developed with the following technologies:
@@ -52,4 +57,4 @@ Other tools used in this project:
 - Google drive
 - Trello
 
-[⬆ Back to the top](#DashboardFx)<br>
+[⬆ Back to the top](#h1)<br>
