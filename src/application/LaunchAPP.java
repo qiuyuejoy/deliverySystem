@@ -1,9 +1,9 @@
 package application;
 
-//import application.forget.*;
+import application.forget.*;
 import application.model.*;
 import application.login.*;
-//import application.regist.*;
+import application.regist.*;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -25,7 +25,6 @@ public class LaunchAPP extends Application {
 		primaryStage.show();		
 	}
 	
-	// show login view
 	public void showLoginView() throws Exception {
 		stage.setTitle("Delivery Management System");
 		stage.getIcons().clear();
@@ -47,50 +46,27 @@ public class LaunchAPP extends Application {
 		recilgController.setLaunchApp(this);
 	}
 	
-	// show forget view
-//	public void showForgetView() {
-//		try {
-//			stage.setTitle("Forget");
-//			ForgetViewController fgController = (ForgetViewController)replaceSceneContent("forget/ForgetView.fxml");
-//			fgController.setLaunchApp(this);
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
+	public void showForgetView() throws Exception {
+		stage.setTitle("Forget Password");
+		stage.getIcons().clear();
+		ForgetViewController fgController = (ForgetViewController)replaceSceneContent("forget/ForgetView.fxml");
+		fgController.setLaunchApp(this);
+	}
 	
-	// show reset password view
-//	public void showResetPasswdView() {
-//		try {
-//			stage.setTitle("ResetPasswdView");
-//			ResetPasswdViewController rpController = (ResetPasswdViewController)replaceSceneContent("forget/ResetPasswdView.fxml");
-//			rpController.setLaunchApp(this);
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
+	public void showResetPasswdView() throws Exception {
+		stage.setTitle("Reset Password");
+		stage.getIcons().clear();
+		ResetPasswdViewController rpController = (ResetPasswdViewController)replaceSceneContent("forget/ResetPasswdView.fxml");
+		rpController.setLaunchApp(this);
+}
 	
-	// show registration view
-//	public void showRegistView() {
-//		try {
-//			stage.setTitle("Regist");
-//			stage.getIcons().add(new Image("file:images/regist.png"));
-//			
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(LunchApp.class.getResource("regist/RegistView.fxml"));
-//			BorderPane bp = (BorderPane)loader.load();
-//			scene = new Scene(bp);
-//			stage.setScene(scene);
-//			stage.setResizable(false);
-//			
-//			RegistViewController regController = (RegistViewController)loader.getController();
-//			System.out.println(regController);
-//			regController.setLunchApp(this);
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
+	public void showRegistView() throws Exception {
+		stage.setTitle("Regist");
+		stage.getIcons().clear();
+		RegistViewController regController = (RegistViewController)replaceSceneContent("regist/RegistView.fxml");
+		regController.setLaunchApp(this);
+	}
 	
-	// replace scene content
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
 		
 		FXMLLoader loader = new FXMLLoader();
