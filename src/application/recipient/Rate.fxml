@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="300.0" minWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.recipient.RateController">
+   <children>
+      <ImageView fitHeight="337.0" fitWidth="600.0" layoutY="-10.0">
+         <image>
+            <Image url="@../../images/recipient/Rate.png" />
+         </image>
+      </ImageView>
+      <CheckBox layoutX="415.0" layoutY="84.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="105.0" text="5 STAR " />
+      <CheckBox layoutX="415.0" layoutY="114.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="70.0" text="4 STAR" />
+      <CheckBox layoutX="415.0" layoutY="150.0" mnemonicParsing="false" text="3 STAR" />
+      <CheckBox layoutX="415.0" layoutY="185.0" mnemonicParsing="false" text="2 STAR" />
+      <CheckBox layoutX="415.0" layoutY="217.0" mnemonicParsing="false" text="1 STAR" />
+   </children>
+</AnchorPane>

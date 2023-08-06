@@ -1,6 +1,6 @@
 package application.regist;
 
-import appication.system.Controller;
+import application.system.Controller;
 
 public class RegistViewController extends Controller{
 

@@ -1,6 +1,6 @@
 package application.forget;
 
-import appication.system.Controller;
+import application.system.Controller;
 
 public class ForgetViewController extends Controller{
 

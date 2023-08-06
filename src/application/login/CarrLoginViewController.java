@@ -1,7 +1,7 @@
 package application.login;
 
-import appication.system.Controller;
 import application.model.*;
+import application.system.Controller;
 import application.tools.*;
 
 import javafx.animation.FadeTransition;

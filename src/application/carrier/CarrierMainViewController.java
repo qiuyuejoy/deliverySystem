@@ -1,6 +1,6 @@
 package application.carrier;
 
-import appication.system.Controller;
+import application.system.Controller;
 
 public class CarrierMainViewController extends Controller{
 	
