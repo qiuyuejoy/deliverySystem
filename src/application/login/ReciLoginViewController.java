@@ -13,8 +13,11 @@ import javafx.util.Duration;
 
 public class ReciLoginViewController extends Controller{
 
-    @FXML
+	@FXML
     private Button btnForget;
+
+    @FXML
+    private Button btnHome;
 
     @FXML
     private Button btnLogin;
@@ -24,15 +27,15 @@ public class ReciLoginViewController extends Controller{
 
     @FXML
     private Button btnReturn;
-    
+
+    @FXML
+    private Label errorInfoLabel;
+
     @FXML
     private TextField passwdInput;
 
     @FXML
     private TextField userNameInput;
-    
-    @FXML
-	private Label errorInfoLabel;
     
     @FXML
     void ClickForget(ActionEvent event) throws Exception {
@@ -67,8 +70,13 @@ public class ReciLoginViewController extends Controller{
     }
 
     @FXML
-    void ClickReturn(ActionEvent event) throws Exception {
-    	launchApp.showLoginView();
+    void ClickHome(ActionEvent event) throws Exception {
+    	launchApp.showMainView();
+    }
+    
+    @FXML
+    void btnReturnClick(ActionEvent event) throws Exception {
+    	launchApp.showMainView();
     }
 }
 

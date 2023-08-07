@@ -15,5 +15,14 @@
       </Label>
       <TextField fx:id="userNameInput" layoutX="220.0" layoutY="187.0" promptText="Please Enter your username" />
       <Button fx:id="btnHome" layoutX="32.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
+      <Button fx:id="btnReturn" layoutX="110.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
+      <Label layoutX="110.0" layoutY="191.0" text="Enter your name" />
+      <Label fx:id="txtPasswd" layoutX="101.0" layoutY="273.0" prefHeight="39.0" prefWidth="382.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFind" layoutX="414.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnFindClick" text="find" />
+      <Button fx:id="btnReset" layoutX="469.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnResetClick" text="reset" />
    </children>
 </AnchorPane>

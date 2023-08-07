@@ -39,13 +39,17 @@ public class Database {
 		deliveries.put(trackingNumber, new Delivery(trackingNumber, recipientName));
 	}
 
-	public static Carrier findCarrier(String userName, String password) {
+	public static Carrier findCarrier(String userName) {
 		for (Carrier carrier : carriers.values()) {
-            if (carrier.getName().equals(userName) && carrier.getPassword().equals(password)) {
+            if (carrier.getName().equals(userName)) {
                 return carrier; 
             }
         }
 		return null;
+	}
+	
+	public static String getCarrierPasswd(Carrier carrier) {
+		return carrier.getPassword();
 	}
 	
 	public static boolean checkCarrierValid(String userName, String password) {
@@ -57,13 +61,17 @@ public class Database {
 		return false;
 	}
 	
-	public static Recipient findRecipient(String userName, String password) {
+	public static Recipient findRecipient(String userName) {
 		for (Recipient recipient : recipients.values()) {
-            if (recipient.getName().equals(userName) && recipient.getPassword().equals(password)) {
+            if (recipient.getName().equals(userName)) {
                 return recipient; 
             }
         }
 		return null;
+	}
+	
+	public static String getRecipientPasswd(Recipient recipient) {
+		return recipient.getPassword();
 	}
 	
 	public static boolean checkRecipientValid(String userName, String password) {
