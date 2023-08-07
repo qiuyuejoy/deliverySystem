@@ -27,8 +27,13 @@ public class RegistViewController extends Controller{
 
     @FXML
     void btnRegistClick(ActionEvent event) throws Exception {
-//    	String userName = userNameInput.getText();
-//		String password = passwdInput.getText();
+    	System.out.println("Handle Recipient Regist Action");
+    	String userName = userNameInput.getText();
+		String phoneNum = phoneInput.getText();
+		String email = emailInput.getText();
+		String password = passwdInput.getText();
+		launchApp.getDatabase().addRecipients(userName, phoneNum, email, password);
+		launchApp.showRecipientMainView();
     }
     
     @FXML

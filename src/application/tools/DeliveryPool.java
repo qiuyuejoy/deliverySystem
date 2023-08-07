@@ -6,17 +6,17 @@ import java.util.HashMap;
 import application.model.Delivery;
 
 public class DeliveryPool {
-	private HashMap<String, Delivery> deliveryMap;
+	private HashMap<Integer, Delivery> deliveryMap;
 
 	public DeliveryPool() {
-		this.deliveryMap = new HashMap<String, Delivery>();
+		this.deliveryMap = new HashMap<Integer, Delivery>();
 	}
 
-	public HashMap<String, Delivery> getDeliveryMap() {
+	public HashMap<Integer, Delivery> getDeliveryMap() {
 		return deliveryMap;
 	}
 
-	public void setDeliveryMap(HashMap<String, Delivery> deliveryMap) {
+	public void setDeliveryMap(HashMap<Integer, Delivery> deliveryMap) {
 		this.deliveryMap = deliveryMap;
 	}	
 	

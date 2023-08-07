@@ -4,13 +4,12 @@ import application.tools.DeliveryPool;
 
 public class Carrier extends Person{
 	private int rating;
+	private String password;
 	private DeliveryPool deliveryMap;
 
 	
-	public Carrier(String name, int phone, int rating, DeliveryPool deliveryMap) {
-		super(name, phone);
-		this.rating = rating;
-		this.deliveryMap = deliveryMap;
+	public Carrier(String name, String phone, String email, String password) {
+		super(name, phone, email, password);
 	}
 	
 	public void scanDelivery(Delivery delivery) {

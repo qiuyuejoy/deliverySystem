@@ -1,10 +1,9 @@
 package application;
 
-import application.model.*;
 import application.login.*;
 import application.carrier.*;
 import application.recipient.*;
-
+import application.tools.*;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -15,12 +14,16 @@ public class LaunchAPP extends Application {
 	
 	private Stage stage;
 	private Scene scene;
-	private Carrier carrier;
-	private Recipient recipient;
+	private Database database;
 	
+	public Database getDatabase() {
+		return database;
+	}
+
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		stage = primaryStage;
+		database = new Database();
 		showLoginView();
 		primaryStage.show();		
 	}
@@ -88,31 +91,6 @@ public class LaunchAPP extends Application {
 		stage.setResizable(false);
 		
 		return loader.getController();
-	}
-
-	
-	public Scene getScene() {
-		return scene;
-	}
-	
-	public Stage getStage() {
-		return stage;
-	}
-	
-	public Carrier getCarrier() {
-		return carrier;
-	}
-	
-	public void setCarrier(Carrier carrier) {
-		this.carrier = carrier;
-	}
-	
-	public Recipient getRecipient() {
-		return recipient;
-	}
-	
-	public void setRecipient(Recipient recipient) {
-		this.recipient = recipient;
 	}
 	
 	public static void main(String[] args) {

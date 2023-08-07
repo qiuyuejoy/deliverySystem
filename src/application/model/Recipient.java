@@ -6,13 +6,13 @@ import application.tools.Preference;
 public class Recipient extends Person{
 	private String address;
 	private Preference preference;
+	private String password;
 	private DeliveryPool deliveryMap;
 	
 	
-	public Recipient(String name, int phone, String address, Preference preference) {
-		super(name, phone);
-		this.address = address;
-		this.preference = preference;
+	
+	public Recipient(String name, String phone, String email, String password) {
+		super(name, phone, email, password);
 	}
 
 
