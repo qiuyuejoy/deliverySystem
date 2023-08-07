@@ -1,10 +1,15 @@
 package application.login;
 
 import application.system.Controller;
+import application.tools.Database;
+import application.tools.*;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 public class ReciLoginViewController extends Controller{
 
@@ -27,29 +32,33 @@ public class ReciLoginViewController extends Controller{
     private TextField userNameInput;
     
     @FXML
+	private Label errorInfoLabel;
+    
+    @FXML
     void ClickForget(ActionEvent event) throws Exception {
     	launchApp.showForgetView();
     }
 
     @FXML
     void ClickLogin(ActionEvent event) throws Exception {
-    	launchApp.showRecipientMainView();
-//    	String userName = userNameInput.getText();
-//		String password = passwdInput.getText();
-//		
-//		if(UserPasswdCheck.isValidUserName(userName) && UserPasswdCheck.isValidPassword(password)) {
-//			Carrier carrier = Database.getCarrier(userName, password);
-//			if(carrier != null) {
-//				launchApp.setCarrier(carrier);
-//				launchApp.showRecipientMainView();
-//			}else {
-//				userNameInput.clear();
-//				passwdInput.clear();
-//			}
-//		}else {
-//			userNameInput.clear();
-//			passwdInput.clear();
-//		}
+    	String userName = userNameInput.getText();
+		String password = passwdInput.getText();
+		
+		if (Database.checkRecipientValid(userName, password)) {
+			DialogAlert.informationDialog("Success Login", "Loading Recipient Main");
+			launchApp.showRecipientMainView();
+		}
+		else {
+			errorInfoLabel.setText("Uncorrect username or password");
+			userNameInput.clear();
+			passwdInput.clear();
+			FadeTransition ft = new FadeTransition();
+			ft.setDuration(Duration.seconds(0.1));
+			ft.setNode(launchApp.getScene().getRoot());
+			ft.setFromValue(0);
+			ft.setToValue(1);
+			ft.play();
+		}
     }
 
     @FXML

@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class LoginViewController extends Controller{
+public class MainViewController extends Controller{
 
     @FXML
     private Button btnCarrierLogin;
