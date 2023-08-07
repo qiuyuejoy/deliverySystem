@@ -16,5 +16,6 @@
       <Button fx:id="btnConfirm" layoutX="329.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnConfirmClick" text="Confirm Receipt" />
       <Button fx:id="btnPreference" layoutX="329.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnPreferenceClick" text="Notification Preference" />
       <Button fx:id="btnRate" layoutX="329.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnRateClick" text="Rate Us" />
+      <Button fx:id="btnHome" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
    </children>
 </AnchorPane>
