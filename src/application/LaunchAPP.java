@@ -15,10 +15,6 @@ public class LaunchAPP extends Application {
 	private Stage stage;
 	private Scene scene;
 	private Database database;
-	
-	public Database getDatabase() {
-		return database;
-	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception{
@@ -28,11 +24,23 @@ public class LaunchAPP extends Application {
 		primaryStage.show();		
 	}
 	
+	public Database getDatabase() {
+		return database;
+	}
+	
+	public Scene getScene() {
+		return scene;
+	}
+	
+	public Stage getStage() {
+		return stage;
+	}
+	
 	public void showLoginView() throws Exception {
 		stage.setTitle("Delivery Management System");
 		stage.getIcons().clear();
-		LoginViewController lgController = (LoginViewController)replaceSceneContent("login/LoginView.fxml");
-		lgController.setLaunchApp(this);
+		MainViewController mainController = (MainViewController)replaceSceneContent("login/MainView.fxml");
+		mainController.setLaunchApp(this);
 	}
 	
 	public void showCarrLoginView() throws Exception {
