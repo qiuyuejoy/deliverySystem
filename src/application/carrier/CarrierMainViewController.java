@@ -7,26 +7,51 @@ import javafx.scene.control.Button;
 
 public class CarrierMainViewController extends Controller{
 
-	@FXML
-	private Button btnArrived;
-	
     @FXML
-    private Button btnAddPackage;
-    
+    private Button btnHome;
 
     @FXML
-    void btnAddPackageClick(ActionEvent event) throws Exception {
-    	
-//    	launchApp.showAddPacView();
+    private Button btnNotifyReci;
+
+    @FXML
+    private Button btnPackageArrived;
+
+    @FXML
+    private Button btnPackageStatus;
+
+    @FXML
+    private Button btnReturn;
+
+    @FXML
+    private Button btnScanPackage;
+
+    @FXML
+    void btnNotifyReciClick(ActionEvent event) {
+
     }
-    
-	@FXML
-	void btnArrivedClick(ActionEvent event) throws Exception {
-//    	launchApp.showCarrierArrivedView();
 
-	}
+    @FXML
+    void btnPackageArrivedClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnPackageStatusClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnReturnClick(ActionEvent event) throws Exception {
+    	launchApp.showCarrLoginView();
+    }
+
+    @FXML
+    void btnScanPackageClick(ActionEvent event) {
+
+    }
 
 }
+
 
 
 

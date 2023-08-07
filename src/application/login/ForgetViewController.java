@@ -30,11 +30,6 @@ public class ForgetViewController extends Controller{
     private Button btnReset;
 
     @FXML
-    void btnHomeClick(ActionEvent event) throws Exception {
-    	launchApp.showMainView();
-    }
-
-    @FXML
     void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showReciLoginView();
     }

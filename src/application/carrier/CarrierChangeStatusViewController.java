@@ -3,11 +3,7 @@ package application.carrier;
 import javafx.event.ActionEvent;
 
 import application.system.Controller;
-import application.model.Carrier;
-import application.model.Delivery;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
 public class CarrierChangeStatusViewController extends Controller{

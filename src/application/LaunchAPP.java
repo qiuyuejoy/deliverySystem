@@ -63,13 +63,6 @@ public class LaunchAPP extends Application {
 		fgController.setLaunchApp(this);
 	}
 	
-	public void showResetPasswdView() throws Exception {
-		stage.setTitle("Reset Password");
-		stage.getIcons().clear();
-		ResetPasswdViewController rpController = (ResetPasswdViewController)replaceSceneContent("login/ResetPasswdView.fxml");
-		rpController.setLaunchApp(this);
-}
-	
 	public void showRegistView() throws Exception {
 		stage.setTitle("Regist");
 		stage.getIcons().clear();
@@ -94,6 +87,24 @@ public class LaunchAPP extends Application {
 		stage.setTitle("Package Status Check");
 		PackageStatusController pacStatusController = (PackageStatusController) replaceSceneContent("recipient/PackageStatus.fxml");
 		pacStatusController.setLaunchApp(this);
+	}
+	
+	public void showPreference() throws Exception {
+		stage.setTitle("Notification Preference");
+		PreferenceController preController =  (PreferenceController) replaceSceneContent("recipient/NotificationPreference.fxml");
+		preController.setLaunchApp(this);
+	}
+	
+	public void showRate() throws Exception {
+		stage.setTitle("Rate Us");
+		RateController rateController =  (RateController) replaceSceneContent("recipient/Rate.fxml");
+		rateController.setLaunchApp(this);
+	}
+
+	public void showReply() throws Exception {
+		stage.setTitle("Confirm Reciept & Help");
+		ReplyController replyController =  (ReplyController) replaceSceneContent("recipient/Reply.fxml");
+		replyController.setLaunchApp(this);		
 	}
 	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {

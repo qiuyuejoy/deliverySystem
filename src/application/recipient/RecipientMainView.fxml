@@ -12,10 +12,10 @@
             <Image url="@../../images/recipient/RecipientMain.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnStatus" layoutX="329.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnStatusClick" text="Package Status" />
-      <Button fx:id="btnConfirm" layoutX="329.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnConfirmClick" text="Confirm Receipt" />
-      <Button fx:id="btnPreference" layoutX="329.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnPreferenceClick" text="Notification Preference" />
-      <Button fx:id="btnRate" layoutX="329.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnRateClick" text="Rate Us" />
-      <Button fx:id="btnHome" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
+      <Button fx:id="btnStatus" layoutX="340.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnStatusClick" prefHeight="23.0" prefWidth="156.0" text="Package Status" />
+      <Button fx:id="btnConfirm" layoutX="340.0" layoutY="132.0" mnemonicParsing="false" onAction="#btnConfirmClick" prefHeight="23.0" prefWidth="156.0" text="Confirm Reciept &amp; Help" />
+      <Button fx:id="btnPreference" layoutX="340.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnPreferenceClick" prefHeight="23.0" prefWidth="156.0" text="Notification Preference" />
+      <Button fx:id="btnRate" layoutX="340.0" layoutY="232.0" mnemonicParsing="false" onAction="#btnRateClick" prefHeight="23.0" prefWidth="156.0" text="Rate Us" />
+      <Button fx:id="btnHome" layoutX="23.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
    </children>
 </AnchorPane>

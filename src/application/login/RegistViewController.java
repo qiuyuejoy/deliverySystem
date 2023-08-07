@@ -47,11 +47,6 @@ public class RegistViewController extends Controller{
 		}
     }
     
-    @FXML
-    void btnHomeClick(ActionEvent event) throws Exception {
-    	launchApp.showMainView();
-    }
-    
     public boolean addUser(String name, String password, int secQueIndex, String answer) {
 		return false;
 		

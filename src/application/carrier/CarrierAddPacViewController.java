@@ -1,42 +1,39 @@
 package application.carrier;
 
-import javafx.event.ActionEvent;
+import application.system.*;
+import application.model.*;
 
-import application.system.Controller;
-import application.model.Carrier;
-import application.model.Delivery;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class CarrierAddPacViewController extends Controller{
 	
-        @FXML
-        
-// return home       
-        private Button btnConfirm;
+	@FXML
+    private Button btnConfirm;
 
-	    @FXML
-	    private TextField recipientNameInput;
+    @FXML
+    private Button btnHome;
 
-	    @FXML
-	    private TextField trackNumImput;
+    @FXML
+    private Button btnReturn;
 
-	    private Carrier curCarrier;
-	    
-	    void AppPackage (){
-	    	
-	    String trackNumber = trackNumImput.getText();
-	    String  curRecipientName = recipientNameInput.getText();
-	    	
-	    Delivery curDelivery = new Delivery(trackNumber, curRecipientName);
-	    	
-	    curCarrier.scanDelivery(curDelivery);
-	    }
-	    @FXML
-	    void ConfirmAppReturnClick(ActionEvent event) throws Exception {
-	    	launchApp.showCarrierMainView();
+    @FXML
+    private TextField recipientNameInput;
 
-		}
+    @FXML
+    private TextField trackNumInput;
+    
+    @FXML
+    void btnConfirmClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnReturnClick(ActionEvent event) throws Exception {
+    	launchApp.showCarrierMainView();
+    }
+    
 }
 

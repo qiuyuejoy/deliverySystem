@@ -13,7 +13,9 @@ public class Database {
 		carriers = new HashMap<String, Carrier>();
 		recipients = new HashMap<String, Recipient>();
 		deliveries = new HashMap<String, Delivery>();
-		deliveries.put("666", new Delivery("666", "Tom"));
+		carriers.put("David", new Carrier("David", "123", "123@neu.com", "123"));
+		recipients.put("Sara", new Recipient("Sara", "456", "456@neu.com", "456"));
+		deliveries.put("666", new Delivery("666", "Muyun"));
 		deliveries.put("888", new Delivery("888", "Joy"));
 	}
 	
