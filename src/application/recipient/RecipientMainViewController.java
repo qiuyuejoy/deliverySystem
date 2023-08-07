@@ -1,32 +1,48 @@
 package application.recipient;
 
-import java.awt.Button;
-
 import application.system.Controller;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 public class RecipientMainViewController extends Controller{
 
 	@FXML
-    private Button btnStatus;
-	public void ClickStatus() {	
-		
-    }
-	
-	@FXML
     private Button btnConfirm;
-	public void ClickComfirm() {	
-    }
-	
-	@FXML
+
+    @FXML
     private Button btnPreference;
-	public void ClickPreference() {	
-    }
-	
-	@FXML
+
+    @FXML
     private Button btnRate;
-	public void ClickRate() {	
+
+    @FXML
+    private Button btnStatus;
+
+    @FXML
+    void btnConfirmClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnPreferenceClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnRateClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnStatusClick(ActionEvent event) {
+
     }
 
 
 }
+
+
+
+
+

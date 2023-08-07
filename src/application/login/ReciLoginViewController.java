@@ -1,9 +1,6 @@
 package application.login;
 
-import application.model.Carrier;
 import application.system.Controller;
-import application.tools.Database;
-import application.tools.UserPasswdCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -36,22 +33,23 @@ public class ReciLoginViewController extends Controller{
 
     @FXML
     void ClickLogin(ActionEvent event) throws Exception {
-    	String userName = userNameInput.getText();
-		String password = passwdInput.getText();
-		
-		if(UserPasswdCheck.isValidUserName(userName) && UserPasswdCheck.isValidPassword(password)) {
-			Carrier carrier = Database.getCarrier(userName, password);
-			if(carrier != null) {
-				launchApp.setCarrier(carrier);
-				launchApp.showRecipientMainView();
-			}else {
-				userNameInput.clear();
-				passwdInput.clear();
-			}
-		}else {
-			userNameInput.clear();
-			passwdInput.clear();
-		}
+    	launchApp.showRecipientMainView();
+//    	String userName = userNameInput.getText();
+//		String password = passwdInput.getText();
+//		
+//		if(UserPasswdCheck.isValidUserName(userName) && UserPasswdCheck.isValidPassword(password)) {
+//			Carrier carrier = Database.getCarrier(userName, password);
+//			if(carrier != null) {
+//				launchApp.setCarrier(carrier);
+//				launchApp.showRecipientMainView();
+//			}else {
+//				userNameInput.clear();
+//				passwdInput.clear();
+//			}
+//		}else {
+//			userNameInput.clear();
+//			passwdInput.clear();
+//		}
     }
 
     @FXML

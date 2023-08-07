@@ -57,4 +57,4 @@ Other tools used in this project:
 - Google drive
 - Trello
 
-[⬆ Back to the top](#h1)<br>
+[⬆ Back to the top]<br>

@@ -12,9 +12,9 @@
             <Image url="@../../images/recipient/RecipientMain.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnStatus" layoutX="329.0" layoutY="79.0" mnemonicParsing="false" onAction="#ClickStatus" text="Package Status" />
-      <Button fx:id="btnConfirm" layoutX="329.0" layoutY="131.0" mnemonicParsing="false" onAction="#ClickComfirm" text="Confirm Receipt" />
-      <Button fx:id="btnPreference" layoutX="329.0" layoutY="183.0" mnemonicParsing="false" onAction="#ClickPreference" text="Notification Preference" />
-      <Button fx:id="btnRate" layoutX="329.0" layoutY="231.0" mnemonicParsing="false" onAction="#ClickRate" text="Rate Us" />
+      <Button fx:id="btnStatus" layoutX="329.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnStatusClick" text="Package Status" />
+      <Button fx:id="btnConfirm" layoutX="329.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnConfirmClick" text="Confirm Receipt" />
+      <Button fx:id="btnPreference" layoutX="329.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnPreferenceClick" text="Notification Preference" />
+      <Button fx:id="btnRate" layoutX="329.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnRateClick" text="Rate Us" />
    </children>
 </AnchorPane>

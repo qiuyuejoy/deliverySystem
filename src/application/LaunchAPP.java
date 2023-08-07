@@ -50,7 +50,6 @@ public class LaunchAPP extends Application {
 	
 	public void showForgetView() throws Exception {
 		stage.setTitle("Forget Password");
-		stage.getIcons().clear();
 		ForgetViewController fgController = (ForgetViewController)replaceSceneContent("forget/ForgetView.fxml");
 		fgController.setLaunchApp(this);
 	}
@@ -70,14 +69,14 @@ public class LaunchAPP extends Application {
 	}
 	
 	public void showCarrierMainView() throws Exception {
-		stage.setTitle("Carrier Main");
+		stage.setTitle("Carrier Main View");
 		CarrierMainViewController carrierController = (CarrierMainViewController)replaceSceneContent("carrier/CarrierMainView.fxml");
 		carrierController.setLaunchApp(this);
 	}
 	
 	public void showRecipientMainView() throws Exception {
-		stage.setTitle("Recipient Main");
-		RecipientMainViewController recipientController = (RecipientMainViewController)replaceSceneContent("recipient/RecipientControllerMainView.fxml");
+		stage.setTitle("Recipient Main View");
+		RecipientMainViewController recipientController = (RecipientMainViewController)replaceSceneContent("recipient/RecipientMainView.fxml");
 		recipientController.setLaunchApp(this);
 	}
 	
