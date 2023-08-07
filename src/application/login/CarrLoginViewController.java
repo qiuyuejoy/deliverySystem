@@ -64,7 +64,7 @@ public class CarrLoginViewController extends Controller{
     
     @FXML
     void btnReturnClick(ActionEvent event) throws Exception {
-    	launchApp.showLoginView();
+    	launchApp.showMainView();
     }
 
 }

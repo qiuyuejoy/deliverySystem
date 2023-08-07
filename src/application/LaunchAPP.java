@@ -20,7 +20,7 @@ public class LaunchAPP extends Application {
 	public void start(Stage primaryStage) throws Exception{
 		stage = primaryStage;
 		database = new Database();
-		showLoginView();
+		showMainView();
 		primaryStage.show();		
 	}
 	
@@ -36,7 +36,7 @@ public class LaunchAPP extends Application {
 		return stage;
 	}
 	
-	public void showLoginView() throws Exception {
+	public void showMainView() throws Exception {
 		stage.setTitle("Delivery Management System");
 		stage.getIcons().clear();
 		MainViewController mainController = (MainViewController)replaceSceneContent("login/MainView.fxml");
