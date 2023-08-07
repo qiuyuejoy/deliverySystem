@@ -1,6 +1,6 @@
 package application.carrier;
 
-import appication.system.Controller;
+import application.system.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

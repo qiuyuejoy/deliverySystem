@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
          <image>
-            <Image url="@../../images/background.jpg" />
+            <Image url="@../../images/backgrounds/WechatIMG1080.png" />
          </image>
       </ImageView>
       <Label contentDisplay="CENTER" layoutX="76.0" layoutY="14.0" text="Delivery Management System">
@@ -39,23 +39,9 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <VBox alignment="CENTER" layoutX="14.0" layoutY="54.0" prefHeight="339.0" prefWidth="263.0" spacing="50.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/deliveryMan.jpeg" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnCarrierLogin" mnemonicParsing="false" onAction="#btnCarrierLoginClick" text="I am Carrier" />
-         </children>
-      </VBox>
       <VBox alignment="CENTER" layoutX="300.0" layoutY="83.0" prefHeight="296.0" prefWidth="292.0" spacing="50.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/recipent.jpeg" />
-               </image>
-            </ImageView>
+            <Button fx:id="btnCarrierLogin" mnemonicParsing="false" onAction="#btnCarrierLoginClick" text="I am Carrier" textFill="#195dc3" />
             <Button fx:id="btnRecipientLogin" mnemonicParsing="false" onAction="#btnRecipientLoginClick" text="I am Recipient" />
          </children>
       </VBox>

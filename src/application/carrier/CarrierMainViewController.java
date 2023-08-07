@@ -1,6 +1,6 @@
 package application.carrier;
 
-import appication.system.Controller;
+import application.system.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,12 +17,12 @@ public class CarrierMainViewController extends Controller{
     @FXML
     void btnAddPackageClick(ActionEvent event) throws Exception {
     	
-    	launchApp.showAddPacView();
+//    	launchApp.showAddPacView();
     }
     
 	@FXML
 	void btnArrivedClick(ActionEvent event) throws Exception {
-    	launchApp.showCarrierArrivedView();
+//    	launchApp.showCarrierArrivedView();
 
 	}
 
