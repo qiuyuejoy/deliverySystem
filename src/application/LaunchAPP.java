@@ -89,6 +89,13 @@ public class LaunchAPP extends Application {
 		recipientController.setLaunchApp(this);
 	}
 	
+
+	public void showPackageStatus() throws Exception {
+		stage.setTitle("Package Status Check");
+		PackageStatusController pacStatusController = (PackageStatusController) replaceSceneContent("recipient/PackageStatus.fxml");
+		pacStatusController.setLaunchApp(this);
+	}
+	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(fxmlFile));
@@ -104,5 +111,6 @@ public class LaunchAPP extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
+
 
 }

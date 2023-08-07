@@ -18,6 +18,9 @@ public class RecipientMainViewController extends Controller{
 
     @FXML
     private Button btnStatus;
+    
+    @FXML
+    private Button btnHome;
 
     @FXML
     void btnConfirmClick(ActionEvent event) {
@@ -35,10 +38,9 @@ public class RecipientMainViewController extends Controller{
     }
 
     @FXML
-    void btnStatusClick(ActionEvent event) {
-
+    void btnStatusClick(ActionEvent event) throws Exception {
+    	launchApp.showPackageStatus();
     }
-
 
 }
 

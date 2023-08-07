@@ -1,21 +1,21 @@
 package application.model;
 
 public class Delivery {
-	private int trackingNumber;
+	private String trackingNumber;
 	private String recipientName;
 	private boolean isSigned;
 	
-	public Delivery(int trackingNumber, String recipientName) {
+	public Delivery(String trackingNumber, String recipientName) {
         this.trackingNumber = trackingNumber;
         this.recipientName = recipientName;
         this.isSigned = false;
     }
 
-    public int getTrackingNumber() {
+    public String getTrackingNumber() {
         return trackingNumber;
     }
 
-    public void setTrackingNumber(int trackingNumber) {
+    public void setTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
     }
 
