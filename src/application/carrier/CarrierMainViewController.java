@@ -46,8 +46,8 @@ public class CarrierMainViewController extends Controller{
     }
 
     @FXML
-    void btnScanPackageClick(ActionEvent event) {
-
+    void btnScanPackageClick(ActionEvent event) throws Exception {
+    	launchApp.showCarrierAddPacView();
     }
 
 }

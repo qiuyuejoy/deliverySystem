@@ -107,6 +107,12 @@ public class LaunchAPP extends Application {
 		replyController.setLaunchApp(this);		
 	}
 	
+	public void showCarrierAddPacView() throws Exception {
+		stage.setTitle("Carrier Scan Package");
+		CarrierAddPacViewController addPacController = (CarrierAddPacViewController) replaceSceneContent("carrier/CarrierAddPacView.fxml");
+		addPacController.setLaunchApp(this);			
+	}
+	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(fxmlFile));
@@ -123,6 +129,4 @@ public class LaunchAPP extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
-
-
 }

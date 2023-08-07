@@ -37,7 +37,8 @@
             <TextField fx:id="emailInput" promptText="Enter your email" />
          </children>
       </VBox>
-      <Button fx:id="btnRegist" layoutX="406.0" layoutY="243.0" mnemonicParsing="false" onAction="#btnRegistClick" text="Register" />
+      <Button fx:id="btnRegistRecipient" layoutX="380.0" layoutY="249.0" mnemonicParsing="false" onAction="#btnRegistRecipientClick" text="I'm Recipient" />
       <Button fx:id="btnHome" layoutX="32.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
+      <Button fx:id="btnRegistCarrier" layoutX="144.0" layoutY="249.0" mnemonicParsing="false" onAction="#btnRegistCarrierClick" text="I'm Carrier" />
    </children>
 </AnchorPane>

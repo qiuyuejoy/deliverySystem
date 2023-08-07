@@ -24,10 +24,34 @@ public class RegistViewController extends Controller{
     private Button btnHome;
     
     @FXML
-    private Button btnRegist;
+    private Button btnRegistCarrier;
 
     @FXML
-    void btnRegistClick(ActionEvent event) throws Exception {
+    private Button btnRegistRecipient;
+
+    @FXML
+    void btnRegistCarrierClick(ActionEvent event) throws Exception {
+    	System.out.println("Handle Carrier Regist Action");
+    	String userName = userNameInput.getText();
+		String phoneNum = phoneInput.getText();
+		String email = emailInput.getText();
+		String password = passwdInput.getText();
+		if (userName != null && phoneNum != null && email != null && password != null) {
+			launchApp.getDatabase().addCarriers(userName, phoneNum, email, password);
+			boolean isGoToRecipientView = DialogAlert.confirmDialog("Success Registed", "Press OK to login carrier main view, press Cancel to return login view");
+			if(isGoToRecipientView) {
+				launchApp.showCarrierMainView();;
+			}else {
+				launchApp.showCarrLoginView();
+			}
+		}
+		else {
+			DialogAlert.errorDialog("Fail Registed", "Please enter all fields");
+		}
+    }
+
+    @FXML
+    void btnRegistRecipientClick(ActionEvent event) throws Exception {
     	System.out.println("Handle Recipient Regist Action");
     	String userName = userNameInput.getText();
 		String phoneNum = phoneInput.getText();
@@ -46,11 +70,6 @@ public class RegistViewController extends Controller{
 			DialogAlert.errorDialog("Fail Registed", "Please enter all fields");
 		}
     }
-    
-    public boolean addUser(String name, String password, int secQueIndex, String answer) {
-		return false;
-		
-	}
 }
 
 

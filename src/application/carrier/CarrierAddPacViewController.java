@@ -1,7 +1,8 @@
 package application.carrier;
 
 import application.system.*;
-import application.model.*;
+import application.tools.Database;
+import application.tools.DialogAlert;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -26,8 +27,22 @@ public class CarrierAddPacViewController extends Controller{
     private TextField trackNumInput;
     
     @FXML
-    void btnConfirmClick(ActionEvent event) {
-
+    void btnConfirmClick(ActionEvent event) throws Exception {
+    	System.out.println("Handle Carrier Scan Package Action");
+    	String recipientName = recipientNameInput.getText();
+		String trackNum = trackNumInput.getText();
+		if (recipientName != null && trackNum != null) {
+			Database.addDeliveries(trackNum, recipientName);
+			boolean isContinue = DialogAlert.confirmDialog("Success Scanned", "Press OK to continue scan, press Cancel to return");
+			if(isContinue) {
+				launchApp.showCarrierAddPacView();
+			}else {
+				launchApp.showCarrierMainView();
+			}
+		}
+		else {
+			DialogAlert.errorDialog("Fail Scanned", "Please enter all fields");
+		}
     }
 
     @FXML
