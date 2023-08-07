@@ -4,10 +4,6 @@
 The Delivery Management System is the final project for CSYE6200-Concepts of Object-Oriented Design. <br/>
 </p>
 
-<p align="center">
-  <img src="./src/images/project_screenshot/home.png"/>
-</p>
-
 <!-- TOC -->
 * [📑 Overview](#-overview)
 * [💻 Environment](#-environment)
