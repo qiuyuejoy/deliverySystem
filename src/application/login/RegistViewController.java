@@ -1,4 +1,4 @@
-package application.regist;
+package application.login;
 
 import application.system.Controller;
 import javafx.event.ActionEvent;
