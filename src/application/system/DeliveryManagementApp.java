@@ -1,7 +1,8 @@
-package application;
+package application.system;
 
 import application.model.Carrier;
 import application.model.Delivery;
+import application.model.Recipient;
 import application.tools.DeliveryPool;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -15,7 +16,7 @@ import javafx.scene.layout.GridPane;
 
 public class DeliveryManagementApp extends Application {
     private Carrier carrier;
-//    private Recipient recipient;
+    private Recipient recipient;
 	private DeliveryPool deliveryPool;
     private ListView<Delivery> deliveryListView;
 

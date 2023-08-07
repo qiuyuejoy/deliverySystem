@@ -1,9 +1,7 @@
 package application;
 
-import application.forget.*;
 import application.model.*;
 import application.login.*;
-import application.regist.*;
 import application.carrier.*;
 import application.recipient.*;
 
@@ -50,34 +48,33 @@ public class LaunchAPP extends Application {
 	
 	public void showForgetView() throws Exception {
 		stage.setTitle("Forget Password");
-		stage.getIcons().clear();
-		ForgetViewController fgController = (ForgetViewController)replaceSceneContent("forget/ForgetView.fxml");
+		ForgetViewController fgController = (ForgetViewController)replaceSceneContent("login/ForgetView.fxml");
 		fgController.setLaunchApp(this);
 	}
 	
 	public void showResetPasswdView() throws Exception {
 		stage.setTitle("Reset Password");
 		stage.getIcons().clear();
-		ResetPasswdViewController rpController = (ResetPasswdViewController)replaceSceneContent("forget/ResetPasswdView.fxml");
+		ResetPasswdViewController rpController = (ResetPasswdViewController)replaceSceneContent("login/ResetPasswdView.fxml");
 		rpController.setLaunchApp(this);
 }
 	
 	public void showRegistView() throws Exception {
 		stage.setTitle("Regist");
 		stage.getIcons().clear();
-		RegistViewController regController = (RegistViewController)replaceSceneContent("regist/RegistView.fxml");
+		RegistViewController regController = (RegistViewController)replaceSceneContent("login/RegistView.fxml");
 		regController.setLaunchApp(this);
 	}
 	
 	public void showCarrierMainView() throws Exception {
-		stage.setTitle("Carrier Main");
+		stage.setTitle("Carrier Main View");
 		CarrierMainViewController carrierController = (CarrierMainViewController)replaceSceneContent("carrier/CarrierMainView.fxml");
 		carrierController.setLaunchApp(this);
 	}
 	
 	public void showRecipientMainView() throws Exception {
-		stage.setTitle("Recipient Main");
-		RecipientMainViewController recipientController = (RecipientMainViewController)replaceSceneContent("recipient/RecipientControllerMainView.fxml");
+		stage.setTitle("Recipient Main View");
+		RecipientMainViewController recipientController = (RecipientMainViewController)replaceSceneContent("recipient/RecipientMainView.fxml");
 		recipientController.setLaunchApp(this);
 	}
 	
