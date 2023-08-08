@@ -7,14 +7,12 @@ public class Notification {
     private String message;
     private boolean isRead;
 
-    // Constructor
     public Notification(Recipient user, String message) {
         this.recipient = user;
         this.message = message;
         this.isRead = false;
     }
 
-    // Getters and Setters
     public Recipient getUser() {
         return recipient;
     }
