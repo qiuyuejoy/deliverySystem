@@ -1,27 +1,41 @@
 package application.recipient;
 
-import java.awt.Button;
 
 import application.system.Controller;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.text.Text;
 
 public class PreferenceController extends Controller{
 	
-	@FXML
-    private Label EmailOrPhone;
-	
-	@FXML
-    private Label PreferenceTimes;
-	
-	@FXML
-    private Text Email;
-	
-	@FXML
-    private Text Phone;
-	
-	@FXML
-    private Button Confirm;
+    @FXML
+    private Button btnConfirm;
 
+    @FXML
+    private Button btnHome;
+
+    @FXML
+    private Label btnMessage;
+
+    @FXML
+    private Button btnReturn;
+    
+
+    @FXML
+    void btnHome(ActionEvent event) throws Exception {
+    	launchApp.showMainView();
+	}
+    
+    @FXML
+    void btnReturnClick(ActionEvent event) throws Exception {
+    	launchApp.showRecipientMainView();
+	}
+
+    @FXML
+    void btnConfirmClick(ActionEvent event) throws Exception {
+    	btnMessage.setText("Set Successfully");
+	}
 }
+
+

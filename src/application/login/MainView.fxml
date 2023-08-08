@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -15,10 +16,10 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
          <image>
-            <Image url="@../../images/background.jpg" />
+            <Image url="@../../images/backgrounds/WechatIMG1080.png" />
          </image>
       </ImageView>
-      <Label contentDisplay="CENTER" layoutX="76.0" layoutY="14.0" text="Delivery Management System">
+      <Label contentDisplay="CENTER" layoutX="105.0" layoutY="14.0" text="Delivery Management System">
          <font>
             <Font name="Times New Roman Bold" size="36.0" />
          </font>
@@ -27,36 +28,53 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color />
+                        <Color red="0.8899999856948853" green="0.3637029528617859" blue="0.07119999825954437" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.8899999856948853" green="0.3637029528617859" blue="0.07119999825954437" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.13600000739097595" green="0.537144660949707" blue="0.800000011920929" />
+                        <Color red="0.7799999713897705" green="0.5582704544067383" blue="0.2651999890804291" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </textFill>
       </Label>
-      <VBox alignment="CENTER" layoutX="14.0" layoutY="54.0" prefHeight="339.0" prefWidth="263.0" spacing="50.0">
+      <VBox alignment="CENTER" layoutX="300.0" layoutY="83.0" prefHeight="296.0" prefWidth="292.0" spacing="20.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/deliveryMan.jpeg" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnCarrierLogin" mnemonicParsing="false" onAction="#btnCarrierLoginClick" text="I am Carrier" />
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" layoutX="300.0" layoutY="83.0" prefHeight="296.0" prefWidth="292.0" spacing="50.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/recipent.jpeg" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnRecipientLogin" mnemonicParsing="false" onAction="#btnRecipientLoginClick" text="I am Recipient" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/deliveryMan.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnCarrierLogin" mnemonicParsing="false" onAction="#btnCarrierLoginClick" text="I am Carrier" textFill="#0d0d0d">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/recipent.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnRecipientLogin" mnemonicParsing="false" onAction="#btnRecipientLoginClick" text="I am Recipient">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

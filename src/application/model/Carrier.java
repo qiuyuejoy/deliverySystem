@@ -4,7 +4,6 @@ import application.tools.DeliveryPool;
 
 public class Carrier extends Person{
 	private int rating;
-	private String password;
 	private DeliveryPool deliveryMap;
 
 	

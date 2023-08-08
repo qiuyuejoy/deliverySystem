@@ -30,11 +30,6 @@ public class ForgetViewController extends Controller{
     private Button btnReset;
 
     @FXML
-    void btnHomeClick(ActionEvent event) throws Exception {
-    	launchApp.showMainView();
-    }
-
-    @FXML
     void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showReciLoginView();
     }
@@ -46,10 +41,11 @@ public class ForgetViewController extends Controller{
 			DialogAlert.warningDialog("No username input", "Please enter your name");
 		}else {
 			Recipient recipient = Database.findRecipient(userName);
-			if(recipient == null) {
+			Carrier carrier = Database.findCarrier(userName);
+			if(recipient == null && carrier == null) {
 				DialogAlert.warningDialog("No this user", "Please enter your name correctly");
 			}else {
-				String passwd = Database.getRecipientPasswd(recipient);
+				String passwd = (recipient != null)? Database.getRecipientPasswd(recipient) : Database.getCarrierPasswd(carrier);
 				txtPasswd.setText("Your password is" + passwd);
 			}			
 		}

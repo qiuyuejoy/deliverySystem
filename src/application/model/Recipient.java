@@ -6,7 +6,6 @@ import application.tools.Preference;
 public class Recipient extends Person{
 	private String address;
 	private Preference preference;
-	private String password;
 	private DeliveryPool deliveryMap;
 	
 	

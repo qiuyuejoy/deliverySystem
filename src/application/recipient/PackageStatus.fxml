@@ -14,8 +14,10 @@
             <Image url="@../../images/recipient/PackageStatusChecking.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnConfirm" layoutX="366.0" layoutY="170.0" mnemonicParsing="false" onAction="#ClickComfirm" text="Confirm" />
-      <TextField layoutX="132.0" layoutY="170.0" prefHeight="23.0" prefWidth="215.0" promptText="Please enter your tracking number" />
-      <Label fx:id="btnReplyMessage" layoutX="132.0" layoutY="211.0" prefHeight="67.0" prefWidth="298.0" text="Label" />
+      <Button fx:id="btnConfirm" layoutX="385.0" layoutY="199.0" mnemonicParsing="false" onAction="#ClickComfirm" text="Confirm" />
+      <TextField fx:id="trackingNumInput" layoutX="150.0" layoutY="199.0" prefHeight="23.0" prefWidth="215.0" promptText="Please enter your tracking number" />
+      <Label fx:id="btnReplyMessage" layoutX="150.0" layoutY="233.0" prefHeight="23.0" prefWidth="393.0" />
+      <Button fx:id="btnHome" layoutX="28.0" layoutY="146.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
+      <Button fx:id="btnReturn" layoutX="89.0" layoutY="146.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
    </children>
 </AnchorPane>

@@ -7,12 +7,16 @@ public class Database {
 
 	private static HashMap<String, Carrier> carriers;
 	private static HashMap<String, Recipient> recipients;
-	private static HashMap<Integer, Delivery> deliveries;
+	private static HashMap<String, Delivery> deliveries;
 	
 	public Database() {
 		carriers = new HashMap<String, Carrier>();
 		recipients = new HashMap<String, Recipient>();
-		deliveries = new HashMap<Integer, Delivery>();
+		deliveries = new HashMap<String, Delivery>();
+		carriers.put("David", new Carrier("David", "123", "123@neu.com", "123"));
+		recipients.put("Sara", new Recipient("Sara", "456", "456@neu.com", "456"));
+		deliveries.put("666", new Delivery("666", "Muyun"));
+		deliveries.put("888", new Delivery("888", "Joy"));
 	}
 	
 	public static HashMap<String, Carrier> getCarriers() {
@@ -23,7 +27,7 @@ public class Database {
 		return recipients;
 	}
 
-	public static HashMap<Integer, Delivery> getDeliveries() {
+	public static HashMap<String, Delivery> getDeliveries() {
 		return deliveries;
 	}
 
@@ -35,7 +39,7 @@ public class Database {
 		recipients.put(name, new Recipient(name, phone, email, password));
 	}
 
-	public static void addDeliveries(int trackingNumber, String recipientName) {
+	public static void addDeliveries(String trackingNumber, String recipientName) {
 		deliveries.put(trackingNumber, new Delivery(trackingNumber, recipientName));
 	}
 
@@ -81,6 +85,19 @@ public class Database {
             }
         }
 		return false;
+	}
+	
+	public static Delivery findDelivery(String trackNumber) {
+		for (Delivery delivery : deliveries.values()) {
+            if (delivery.getTrackingNumber().equals(trackNumber)) {
+                return delivery; 
+            }
+        }
+		return null;
+	}
+	
+	public static boolean getPackageStatus(String trackNumber) {
+		return deliveries.get(trackNumber).isSigned();
 	}
 	
 	

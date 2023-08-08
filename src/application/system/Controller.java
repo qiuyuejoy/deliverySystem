@@ -1,6 +1,9 @@
 package application.system;
 
 import application.LaunchAPP;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
 
 public abstract class Controller {
 	
@@ -13,4 +16,10 @@ public abstract class Controller {
 	public void setLaunchApp(LaunchAPP launchApp) {
 		this.launchApp = launchApp;
 	}
+	
+	@FXML
+    void btnHomeClick(ActionEvent event) throws Exception {
+    	launchApp.showMainView();
+    }
+
 }
