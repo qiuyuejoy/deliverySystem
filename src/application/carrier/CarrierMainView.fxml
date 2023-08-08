@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.carrier.CarrierMainViewController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
@@ -25,10 +24,10 @@
       </Label>
       <VBox alignment="CENTER_LEFT" layoutX="408.0" layoutY="77.0" prefHeight="247.0" prefWidth="157.0" spacing="30.0">
          <children>
-            <Button fx:id="btnScanPackage" mnemonicParsing="false" onAction="#btnScanPackageClick" text="Scan new Package" />
-            <Button fx:id="btnPackageStatus" mnemonicParsing="false" onAction="#btnPackageStatusClick" prefHeight="26.0" prefWidth="119.0" text="Package Status" />
-            <Button fx:id="btnNotifyReci" mnemonicParsing="false" onAction="#btnNotifyReciClick" prefHeight="26.0" prefWidth="118.0" text="Notify Recipient" />
-            <Button fx:id="btnPackageArrived" mnemonicParsing="false" onAction="#btnPackageArrivedClick" text="Package Delivered" />
+            <Button fx:id="btnScanPackage" mnemonicParsing="false" onAction="#btnScanPackageClick" prefHeight="26.0" prefWidth="150.0" text="Scan new Package" />
+            <Button fx:id="btnPackageStatus" mnemonicParsing="false" onAction="#btnPackageStatusClick" prefHeight="26.0" prefWidth="150.0" text="Change Package Status" />
+            <Button fx:id="btnNotifyReci" mnemonicParsing="false" onAction="#btnNotifyReciClick" prefHeight="26.0" prefWidth="150.0" text="Notify Recipient" />
+            <Button fx:id="btnPackageArrived" mnemonicParsing="false" onAction="#btnPackageArrivedClick" prefWidth="150.0" text="Package Delivered" />
          </children>
       </VBox>
    </children>

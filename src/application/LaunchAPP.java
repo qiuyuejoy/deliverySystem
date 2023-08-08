@@ -113,6 +113,13 @@ public class LaunchAPP extends Application {
 		addPacController.setLaunchApp(this);			
 	}
 	
+
+	public void showCarrierChangeStatusView() throws Exception {
+		stage.setTitle("Carrier Change Status");
+		CarrierChangeStatusViewController changeStatusController = (CarrierChangeStatusViewController) replaceSceneContent("carrier/CarrierChangeStatusView.fxml");
+		changeStatusController.setLaunchApp(this);				
+	}
+	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(fxmlFile));

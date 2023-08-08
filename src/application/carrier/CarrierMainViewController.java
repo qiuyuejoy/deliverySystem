@@ -36,8 +36,8 @@ public class CarrierMainViewController extends Controller{
     }
 
     @FXML
-    void btnPackageStatusClick(ActionEvent event) {
-
+    void btnPackageStatusClick(ActionEvent event) throws Exception {
+    	launchApp.showCarrierChangeStatusView();
     }
 
     @FXML
