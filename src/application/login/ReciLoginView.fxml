@@ -26,10 +26,5 @@
             <Font name="Arial Bold" size="17.0" />
          </font></Label>
       <Button fx:id="btnReturn" layoutX="92.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
-      <ImageView fitHeight="117.0" fitWidth="154.0" layoutX="454.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/recipent.jpeg" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
