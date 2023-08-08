@@ -29,8 +29,9 @@ public class ForgetViewController extends Controller{
     @FXML
     private Button btnReset;
 
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+    public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showReciLoginView();
     }
     

@@ -24,8 +24,9 @@ import javafx.scene.control.Label;
     @FXML
     private Button btnLoginOut;
     
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+    public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showRecipientMainView();
 	}
     
