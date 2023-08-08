@@ -63,13 +63,6 @@ public class LaunchAPP extends Application {
 		fgController.setLaunchApp(this);
 	}
 	
-	public void showResetPasswdView() throws Exception {
-		stage.setTitle("Reset Password");
-		stage.getIcons().clear();
-		ResetPasswdViewController rpController = (ResetPasswdViewController)replaceSceneContent("login/ResetPasswdView.fxml");
-		rpController.setLaunchApp(this);
-}
-	
 	public void showRegistView() throws Exception {
 		stage.setTitle("Regist");
 		stage.getIcons().clear();
@@ -96,6 +89,43 @@ public class LaunchAPP extends Application {
 		pacStatusController.setLaunchApp(this);
 	}
 	
+	public void showPreference() throws Exception {
+		stage.setTitle("Notification Preference");
+		PreferenceController preController =  (PreferenceController) replaceSceneContent("recipient/NotificationPreference.fxml");
+		preController.setLaunchApp(this);
+	}
+	
+	public void showRate() throws Exception {
+		stage.setTitle("Rate Us");
+		RateController rateController =  (RateController) replaceSceneContent("recipient/Rate.fxml");
+		rateController.setLaunchApp(this);
+	}
+
+	public void showReply() throws Exception {
+		stage.setTitle("Confirm Reciept & Help");
+		ReplyController replyController =  (ReplyController) replaceSceneContent("recipient/Reply.fxml");
+		replyController.setLaunchApp(this);		
+	}
+	
+	public void showCarrierAddPacView() throws Exception {
+		stage.setTitle("Carrier Scan Package");
+		CarrierAddPacViewController addPacController = (CarrierAddPacViewController) replaceSceneContent("carrier/CarrierAddPacView.fxml");
+		addPacController.setLaunchApp(this);			
+	}
+	
+
+	public void showCarrierChangeStatusView() throws Exception {
+		stage.setTitle("Carrier Change Status");
+		CarrierChangeStatusViewController changeStatusController = (CarrierChangeStatusViewController) replaceSceneContent("carrier/CarrierChangeStatusView.fxml");
+		changeStatusController.setLaunchApp(this);				
+	}
+	
+	public void showCarrierArrivedView() throws Exception {
+		stage.setTitle("Carrier Arrived View");
+		CarrierArrivedViewController arrivedController = (CarrierArrivedViewController) replaceSceneContent("carrier/CarrierArrivedView.fxml");
+		arrivedController.setLaunchApp(this);	
+	}
+	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(fxmlFile));
@@ -108,9 +138,8 @@ public class LaunchAPP extends Application {
 		return loader.getController();
 	}
 	
+	
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
-
-
 }

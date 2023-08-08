@@ -1,5 +1,6 @@
 package application.recipient;
 
+import application.model.Delivery;
 import application.system.Controller;
 import application.tools.Database;
 import javafx.event.ActionEvent;
@@ -21,21 +22,32 @@ public class PackageStatusController extends Controller{
 
     @FXML
     private TextField trackingNumInput;
+    
+    @FXML
+    private Button btnReturn;
+    
 
     @FXML
     void ClickComfirm(ActionEvent event) {
     	String trackNum = trackingNumInput.getText();
-    	if (Database.findDelivery(trackNum) == null) {
-    		btnReplyMessage.setText("Dit not find your package, Please check your tracking number");	
+    	Delivery delivery = Database.findDelivery(trackNum);
+    	if (delivery == null ) {
+    		btnReplyMessage.setText("Oops! Cannot find your package, please check tracking number.");	
     	}
     	else {
-    		boolean status = Database.getPackageStatus(trackNum);
-    		if (status == true) {
-    			btnReplyMessage.setText("Your package status has bees signed");
+    		boolean signed = delivery.isSigned();
+    		String status = delivery.getStatus();
+    		if (signed) {
+    			btnReplyMessage.setText("Your package has bees signed! If you have any problem, please click Confirm & Help.");
     		}
     		else {
-    			btnReplyMessage.setText("Your package status is on the way");	
+    			btnReplyMessage.setText("Your package is on the way! Status is : " + status);	
     		}	
     	}
+    }
+    
+    @FXML
+	protected void btnReturnClick(ActionEvent event) throws Exception {
+    	launchApp.showRecipientMainView();
     }
 }

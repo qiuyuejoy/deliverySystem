@@ -5,7 +5,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -13,14 +12,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login.MainViewController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+      <ImageView fitHeight="400.0" fitWidth="725.0" layoutX="-29.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/background.jpg" />
+            <Image url="@../../images/backgrounds/WechatIMG1080.png" />
          </image>
       </ImageView>
-      <Label contentDisplay="CENTER" layoutX="76.0" layoutY="14.0" text="Delivery Management System">
+      <Label layoutX="242.0" layoutY="107.0" prefHeight="41.0" prefWidth="323.0" text="Delivery Management System">
          <font>
-            <Font name="Times New Roman Bold" size="36.0" />
+            <Font name="Times New Roman Bold Italic" size="26.0" />
          </font>
          <textFill>
             <LinearGradient endX="0.5914489311163895" endY="0.44418052256532065">
@@ -32,32 +31,22 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.13600000739097595" green="0.537144660949707" blue="0.800000011920929" />
+                        <Color red="0.19179120659828186" green="0.26356762647628784" blue="0.8070175647735596" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </textFill>
       </Label>
-      <VBox alignment="CENTER" layoutX="14.0" layoutY="54.0" prefHeight="339.0" prefWidth="263.0" spacing="50.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/deliveryMan.jpeg" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnCarrierLogin" mnemonicParsing="false" onAction="#btnCarrierLoginClick" text="I am Carrier" />
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" layoutX="300.0" layoutY="83.0" prefHeight="296.0" prefWidth="292.0" spacing="50.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/recipent.jpeg" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnRecipientLogin" mnemonicParsing="false" onAction="#btnRecipientLoginClick" text="I am Recipient" />
-         </children>
-      </VBox>
+      <Button fx:id="btnRecipientLogin" layoutX="337.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnRecipientLoginClick" prefHeight="23.0" prefWidth="112.0" text="RECIPIENT">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCarrierLogin" layoutX="337.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnCarrierLoginClick" prefHeight="23.0" prefWidth="112.0" text="CARRIER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

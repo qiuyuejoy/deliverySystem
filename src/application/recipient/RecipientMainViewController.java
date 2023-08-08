@@ -21,20 +21,21 @@ public class RecipientMainViewController extends Controller{
     
     @FXML
     private Button btnHome;
+    
 
     @FXML
-    void btnConfirmClick(ActionEvent event) {
-
+    void btnConfirmClick(ActionEvent event) throws Exception {
+    	launchApp.showReply();
     }
 
     @FXML
-    void btnPreferenceClick(ActionEvent event) {
-
+    void btnPreferenceClick(ActionEvent event) throws Exception {
+    	launchApp.showPreference();
     }
 
     @FXML
-    void btnRateClick(ActionEvent event) {
-
+    void btnRateClick(ActionEvent event) throws Exception {
+    	launchApp.showRate();
     }
 
     @FXML

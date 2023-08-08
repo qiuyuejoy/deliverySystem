@@ -4,11 +4,13 @@ public class Delivery {
 	private String trackingNumber;
 	private String recipientName;
 	private boolean isSigned;
+	private String status;
 	
 	public Delivery(String trackingNumber, String recipientName) {
         this.trackingNumber = trackingNumber;
         this.recipientName = recipientName;
         this.isSigned = false;
+        this.status = "No tracing";
     }
 
     public String getTrackingNumber() {
@@ -27,7 +29,15 @@ public class Delivery {
         this.recipientName = recipientName;
     }
 
-    public Boolean isSigned() {
+    public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Boolean isSigned() {
         return isSigned;
     }
 
