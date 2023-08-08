@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="300.0" minWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login.ReciLoginViewController">
    <children>
@@ -20,7 +21,10 @@
       <Button fx:id="btnRegist" layoutX="194.0" layoutY="164.0" mnemonicParsing="false" onAction="#ClickRegist" text="Regist" />
       <Button fx:id="btnLogin" layoutX="269.0" layoutY="162.0" mnemonicParsing="false" onAction="#ClickLogin" text="Login" />
       <Button fx:id="btnForget" layoutX="342.0" layoutY="162.0" mnemonicParsing="false" onAction="#ClickForget" text="Forget" />
-      <Label fx:id="errorInfoLabel" layoutX="154.0" layoutY="32.0" prefHeight="17.0" prefWidth="278.0" />
+      <Label fx:id="errorInfoLabel" layoutX="154.0" layoutY="59.0" prefHeight="17.0" prefWidth="278.0" textFill="#e87b0e">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></Label>
       <Button fx:id="btnReturn" layoutX="92.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
       <ImageView fitHeight="117.0" fitWidth="154.0" layoutX="454.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>

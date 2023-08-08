@@ -15,7 +15,7 @@
          </image>
       </ImageView>
       <Button fx:id="btnSubmit" layoutX="265.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnSubmitClick" prefHeight="17.0" prefWidth="77.0" text="Submit" />
-      <Button fx:id="btnLoginOut" layoutX="499.0" layoutY="280.0" mnemonicParsing="false" onAction="#btnLoginOutClick" prefHeight="23.0" prefWidth="77.0" text="Login Out" />
+      <Button fx:id="btnLoginOut" layoutX="499.0" layoutY="280.0" mnemonicParsing="false" onAction="#btnLoginOutClick" prefHeight="23.0" prefWidth="77.0" text="Log out" />
       <Button fx:id="btnReturn" layoutX="499.0" layoutY="247.0" mnemonicParsing="false" onAction="#btnReturnClick" prefHeight="23.0" prefWidth="77.0" text="Return" />
       <CheckBox layoutX="265.0" layoutY="86.0" mnemonicParsing="false" text="5 STAR !" />
       <CheckBox layoutX="349.0" layoutY="86.0" mnemonicParsing="false" text="3 STAR !" />
