@@ -56,7 +56,7 @@ public class CarrLoginViewController extends Controller{
 			launchApp.showCarrierMainView();
 		}
 		else {
-			errorInfoLabel.setText("Uncorrect username or password");
+			errorInfoLabel.setText("Incorrect username or password");
 			userNameInput.clear();
 			passwdInput.clear();
 			FadeTransition ft = new FadeTransition();

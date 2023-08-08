@@ -11,9 +11,6 @@ public class CarrierMainViewController extends Controller{
     private Button btnHome;
 
     @FXML
-    private Button btnNotifyReci;
-
-    @FXML
     private Button btnPackageArrived;
 
     @FXML
