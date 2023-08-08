@@ -120,6 +120,12 @@ public class LaunchAPP extends Application {
 		changeStatusController.setLaunchApp(this);				
 	}
 	
+	public void showCarrierArrivedView() throws Exception {
+		stage.setTitle("Carrier Arrived View");
+		CarrierArrivedViewController arrivedController = (CarrierArrivedViewController) replaceSceneContent("carrier/CarrierArrivedView.fxml");
+		arrivedController.setLaunchApp(this);	
+	}
+	
 	private Object replaceSceneContent(String fxmlFile) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(fxmlFile));

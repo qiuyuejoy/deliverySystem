@@ -31,8 +31,8 @@ public class CarrierMainViewController extends Controller{
     }
 
     @FXML
-    void btnPackageArrivedClick(ActionEvent event) {
-
+    void btnPackageArrivedClick(ActionEvent event) throws Exception {
+    	launchApp.showCarrierArrivedView();
     }
 
     @FXML
