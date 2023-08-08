@@ -10,37 +10,32 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login.CarrLoginViewController">
+<AnchorPane minHeight="300.0" minWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login.CarrLoginViewController">
    <children>
-      <ImageView fitHeight="379.0" fitWidth="600.0" layoutX="-1.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="379.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/images_login/click.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="109.0" fitWidth="149.0" layoutX="444.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/deliveryMan.jpeg" />
-         </image>
-      </ImageView>
-      <HBox alignment="CENTER" layoutX="155.0" layoutY="190.0" prefHeight="55.0" prefWidth="289.0" spacing="30.0">
-         <children>
-            <Button fx:id="btnCarriRegister" mnemonicParsing="false" onAction="#btnCarriRegisterClick" text="Regist" />
-            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#btnLoginClick" text="Login" />
-            <Button fx:id="btnForget" mnemonicParsing="false" onAction="#btnForgetClick" text="Forget" />
-         </children>
-      </HBox>
-      <VBox alignment="CENTER" layoutX="174.0" layoutY="87.0" prefHeight="121.0" prefWidth="250.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="175.0" layoutY="88.0" prefHeight="69.0" prefWidth="250.0" spacing="20.0">
          <children>
             <TextField fx:id="userNameInput" promptText="Please Enter Your Name" />
             <TextField fx:id="passwdInput" promptText="Please Enter Your Password" />
          </children>
       </VBox>
       <Button fx:id="btnReturn" layoutX="97.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
-      <Button fx:id="btnHome" layoutX="24.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
-      <Label fx:id="errorInfoLabel" layoutX="9.0" layoutY="64.0" prefHeight="31.0" prefWidth="415.0" textFill="#fa670c">
+      <Button fx:id="btnHome" layoutX="35.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
+      <Label fx:id="errorInfoLabel" layoutX="175.0" layoutY="54.0" prefHeight="34.0" prefWidth="250.0" textFill="#fa670c">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
+      <HBox alignment="CENTER" layoutX="192.0" layoutY="169.0" prefHeight="23.0" prefWidth="216.0" spacing="30.0">
+         <children>
+            <Button fx:id="btnCarriRegister" mnemonicParsing="false" onAction="#btnCarriRegisterClick" text="Regist" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#btnLoginClick" text="Login" />
+            <Button fx:id="btnForget" mnemonicParsing="false" onAction="#btnForgetClick" text="Forget" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

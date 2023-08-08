@@ -1,2 +1,3 @@
 bin/*
 src/application/login/.DS_Store
+/bin/
