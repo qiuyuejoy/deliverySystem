@@ -46,8 +46,9 @@ public class PackageStatusController extends Controller{
     	}
     }
     
+    @Override
     @FXML
-	protected void btnReturnClick(ActionEvent event) throws Exception {
+	public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showRecipientMainView();
     }
 }

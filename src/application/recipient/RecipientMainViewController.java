@@ -22,7 +22,9 @@ public class RecipientMainViewController extends Controller{
     @FXML
     private Button btnHome;
     
-
+    @FXML
+    private Button btnReturn;
+    
     @FXML
     void btnConfirmClick(ActionEvent event) throws Exception {
     	launchApp.showReply();
@@ -42,6 +44,11 @@ public class RecipientMainViewController extends Controller{
     void btnStatusClick(ActionEvent event) throws Exception {
     	launchApp.showPackageStatus();
     }
+
+	@Override
+	public void btnReturnClick(ActionEvent event) throws Exception {
+		launchApp.showReciLoginView();
+	}
 
 }
 

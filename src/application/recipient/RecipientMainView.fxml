@@ -17,5 +17,6 @@
       <Button fx:id="btnPreference" layoutX="340.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnPreferenceClick" prefHeight="23.0" prefWidth="156.0" text="Notification Preference" />
       <Button fx:id="btnRate" layoutX="340.0" layoutY="232.0" mnemonicParsing="false" onAction="#btnRateClick" prefHeight="23.0" prefWidth="156.0" text="Rate Us" />
       <Button fx:id="btnHome" layoutX="23.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
+      <Button fx:id="btnReturn" layoutX="91.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
    </children>
 </AnchorPane>

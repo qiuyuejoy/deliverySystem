@@ -45,8 +45,9 @@ public class CarrierAddPacViewController extends Controller{
 		}
     }
 
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+	public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showCarrierMainView();
     }
     

@@ -24,8 +24,9 @@ public class RateController extends Controller {
     	launchApp.showMainView();
     }
     
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+    public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showRecipientMainView();
 	}
     
