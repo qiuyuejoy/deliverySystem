@@ -39,8 +39,10 @@ public class CarrierChangeStatusViewController extends Controller{
     public void initialize() {
     	choiceStatus.setItems(choices);
     }
+    
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+    public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showCarrierMainView();
     }
     
@@ -56,15 +58,7 @@ public class CarrierChangeStatusViewController extends Controller{
         	statusInfo.setText("Your choice is " + choose);
         	delivery.setStatus(choose);
     	}	
-    }
-    
-    
-    
-	
-    
-    
-
-       
+    }       
 }
 
 

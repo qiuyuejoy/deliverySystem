@@ -70,6 +70,13 @@ public class RegistViewController extends Controller{
 			DialogAlert.errorDialog("Fail Registed", "Please enter all fields");
 		}
     }
+
+	@Override
+	@FXML
+	public void btnReturnClick(ActionEvent event) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
 

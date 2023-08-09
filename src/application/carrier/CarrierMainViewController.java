@@ -37,8 +37,9 @@ public class CarrierMainViewController extends Controller{
     	launchApp.showCarrierChangeStatusView();
     }
 
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+    public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showCarrLoginView();
     }
 
