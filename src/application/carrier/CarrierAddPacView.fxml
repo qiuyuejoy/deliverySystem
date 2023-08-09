@@ -8,24 +8,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.carrier.CarrierAddPacViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.carrier.CarrierAddPacViewController">
    <children>
-      <ImageView fitHeight="393.0" fitWidth="600.0" layoutY="4.0">
+      <ImageView fitHeight="397.0" fitWidth="600.0">
          <image>
             <Image url="@../../images/backgrounds/WechatIMG1075.png" />
          </image>
       </ImageView>
-      <TextField fx:id="trackNumInput" layoutX="116.0" layoutY="188.0" prefHeight="26.0" prefWidth="215.0" promptText="imput 6 digital tracking number" />
-      <TextField fx:id="recipientNameInput" layoutX="116.0" layoutY="251.0" prefHeight="26.0" prefWidth="215.0" promptText="imput recipient's first name" />
-      <Button fx:id="btnConfirm" layoutX="180.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnConfirmClick" text="Confirm" />
-      <Label layoutX="9.0" layoutY="192.0" text="Tracking Number" />
-      <Label layoutX="13.0" layoutY="256.0" text="Recipient Name" />
-      <Label layoutX="133.0" layoutY="76.0" text="New Package Arraving" textFill="#e88413">
+      <TextField fx:id="trackNumInput" layoutX="65.0" layoutY="174.0" prefHeight="26.0" prefWidth="229.0" promptText="enter 6 digital tracking number" />
+      <TextField fx:id="recipientNameInput" layoutX="65.0" layoutY="212.0" prefHeight="26.0" prefWidth="229.0" promptText="enter recipient's first name" />
+      <Button fx:id="btnConfirm" layoutX="65.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnConfirmClick" text="Confirm" />
+      <Label layoutX="148.0" layoutY="102.0" text="New Package Arraving" textFill="#e88413">
          <font>
-            <Font name="Arial Bold" size="33.0" />
+            <Font name="Arial Bold Italic" size="27.0" />
          </font>
       </Label>
       <Button fx:id="btnHome" layoutX="29.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnHomeClick" text="Home" />
-      <Button fx:id="btnReturn" layoutX="100.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
+      <Button fx:id="btnReturn" layoutX="95.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
    </children>
 </AnchorPane>

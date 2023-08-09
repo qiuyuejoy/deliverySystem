@@ -32,8 +32,9 @@ public class CarrierArrivedViewController extends Controller {
     @FXML
     private Label notiInfo;
 
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+    public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showCarrierMainView();
     }
 

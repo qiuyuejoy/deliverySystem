@@ -22,5 +22,11 @@ public class MainViewController extends Controller{
     void btnRecipientLoginClick(ActionEvent event) throws Exception {
     	launchApp.showReciLoginView();
     }
+
+	@Override
+	@FXML
+	public void btnReturnClick(ActionEvent event) throws Exception {
+		// TODO Auto-generated method stub	
+	}
 }
 

@@ -25,6 +25,3 @@ public class Preference {
         this.frequency = frequency;
     }
 }
-
-//- method: (email, SMS) 
-//- frequency (real-time, daily) 

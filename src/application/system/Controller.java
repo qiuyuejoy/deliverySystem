@@ -4,8 +4,7 @@ import application.LaunchAPP;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-
-public abstract class Controller {
+public abstract class Controller implements PageInterface{
 	
 	protected LaunchAPP launchApp;
 
@@ -17,9 +16,13 @@ public abstract class Controller {
 		this.launchApp = launchApp;
 	}
 	
+	@Override
 	@FXML
-    void btnHomeClick(ActionEvent event) throws Exception {
+	public void btnHomeClick(ActionEvent event) throws Exception {
     	launchApp.showMainView();
     }
-
+	
+	@Override
+	@FXML
+	public abstract void btnReturnClick(ActionEvent event) throws Exception;
 }

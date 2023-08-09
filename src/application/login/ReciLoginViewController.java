@@ -52,7 +52,7 @@ public class ReciLoginViewController extends Controller{
 			launchApp.showRecipientMainView();
 		}
 		else {
-			errorInfoLabel.setText("Uncorrect username or password");
+			errorInfoLabel.setText("Incorrect username or password");
 			userNameInput.clear();
 			passwdInput.clear();
 			FadeTransition ft = new FadeTransition();
@@ -74,8 +74,9 @@ public class ReciLoginViewController extends Controller{
     	launchApp.showMainView();
     }
     
+    @Override
     @FXML
-    void btnReturnClick(ActionEvent event) throws Exception {
+    public void btnReturnClick(ActionEvent event) throws Exception {
     	launchApp.showMainView();
     }
 }

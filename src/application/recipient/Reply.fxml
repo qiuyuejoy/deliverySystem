@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane minHeight="300.0" minWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.recipient.ReplyController">
    <children>
       <ImageView fitHeight="340.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
@@ -27,6 +26,6 @@
       <Button fx:id="btnSubmit" layoutX="450.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnSubmitClick" prefHeight="17.0" prefWidth="97.0" text="Submit" />
       <Button fx:id="btnReturn" layoutX="122.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnReturnClick" text="Return" />
       <Label fx:id="myMessage" layoutX="450.0" layoutY="186.0" prefHeight="23.0" prefWidth="97.0" />
-      <Button fx:id="btnLoginOut" layoutX="34.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnLoginOutClick" text="Login Out" />
+      <Button fx:id="btnLoginOut" layoutX="34.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnLoginOutClick" text="Log Out" />
    </children>
 </AnchorPane>
