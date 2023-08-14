@@ -22,7 +22,6 @@ In this project, we built a Delivery Management System based on JavaFX for both 
 # 🛠 Installation
 1. Clone the repository into your local machine
 2. Download [JavaFX SDK](https://gluonhq.com/products/javafx/) and [MySQL](https://dev.mysql.com/downloads/installer/)
-3. 
 
 # 🚀 Technologies
 This project was developed with the following technologies:
